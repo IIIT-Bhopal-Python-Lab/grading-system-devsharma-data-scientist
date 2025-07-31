@@ -1,20 +1,25 @@
-def Grade(p):
-    if isinstance(p, str) and p.lower() == "exit":
-        return "EXIT SUCCESSFUL"
-    
-    try:
-        a = int(p)
-        if a >= 0 and a < 40:
-            return "F"
-        elif a >= 40 and a < 60:
-            return "D"
-        elif a >= 60 and a < 75:
-            return "C"
-        elif a >= 75 and a < 90:
-            return "B"
-        elif a >= 90 and a <= 100:
-            return "A"
-        else:
-            return "INVALID INPUT!"
-    except:
-        return "INVALID INPUT!"
+def Grade(): #function "Grade()"
+        p = input("Enter Your Marks and to Exit write EXIT: ")
+
+        if p.lower() == "exit":
+            print("EXIT SUCCESSFUL")
+            return
+
+        try:
+            a = int(p)    #input ko integer me convert krne ki koshish kro
+            if a >= 0 and a < 40:
+                print("F")   #Fail
+            elif a >= 40 and a < 60:
+                print("D")   #
+            elif a >= 60 and a < 75:
+                print("C")
+            elif a >= 75 and a < 90:
+                print("B")
+            elif a >= 90 and a <= 100:
+                print("A")
+            else:
+                print("INVALID INPUT!")  
+        except:
+            print("INVALID INPUT!")
+
+Grade()
